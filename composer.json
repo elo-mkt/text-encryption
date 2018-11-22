@@ -1,5 +1,5 @@
 {
-    "name": "paulo/text-encryption",
+    "name": "catskillet/text-encryption",
     "description": "Encriptação de Desencriptação de strings para requests",
     "type": "vcs",
     "authors": [
