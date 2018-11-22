@@ -1,0 +1,20 @@
+{
+    "name": "paulo/text-encryption",
+    "description": "Encriptação de Desencriptação de strings para requests",
+    "type": "vcs",
+    "authors": [
+        {
+            "name": "Paulo",
+            "email": "paulo@catskillet.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Encryption": "src/"
+        }
+    }
+}
