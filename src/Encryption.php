@@ -60,4 +60,22 @@ class Encryption
         else
             return "decript error!";
     }
+
+    public function objectEncrypt($object)
+    {
+        foreach ($object as $key => $value){
+            $object->{$key} = $this->encript($value);
+        }
+
+        return $object;
+    }
+
+    public function objectDencrypt($object)
+    {
+        foreach ($object as $key => $value){
+            $object->{$key} = $this->decript($value);
+        }
+
+        return $object;
+    }
 }

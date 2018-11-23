@@ -17,5 +17,14 @@ spl_autoload_register(function ($class_name) {
 
 $encryption = new Encryption('teste', 'aes-128-cbc-hmac-sha256');
 
-echo $encryption->encript('Paulo');
-echo $encryption->decript('iDWyYKEELPyfmUk0Fzq94IOcnmAgUn/UQ5/n5C2ShVb3Sv3IQHHqI3sKcIyrazf9lR4dyYQszgJnPT0ioMlewQ==');
+$testeObj = (object) array(
+  'name' => 'Paulo',
+  'idade' => 26
+);
+
+$obj = $encryption->objectEncrypt($testeObj);
+//$obj = $encryption->objectDencrypt($obj);
+
+echo $obj->idade;
+//echo $encryption->encript('Paulo');
+//echo $encryption->decript('iDWyYKEELPyfmUk0Fzq94IOcnmAgUn/UQ5/n5C2ShVb3Sv3IQHHqI3sKcIyrazf9lR4dyYQszgJnPT0ioMlewQ==');
