@@ -1,5 +1,5 @@
 {
-    "name": "catskillet/text-encryption",
+    "name": "elo-mkt/text-encryption",
     "description": "Encriptação de Desencriptação de strings para requests",
     "type": "vcs",
     "authors": [
@@ -10,7 +10,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.3.0"
+        "php": ">=5.3.0"catskillet
     },
     "autoload": {
         "psr-0": {
