@@ -78,4 +78,23 @@ class Encryption
 
         return $object;
     }
+    
+    public function encriptSalt($textToDecript)
+    {
+        return base64_encode($this->key.$textToDecript);
+    }
+
+    public function decriptSalt($textToDecript)
+    {
+        $c = base64_decode($textToDecript);
+
+        $jsonString = base64_decode($jsonString);
+
+        $salt = substr($jsonString, 0, strlen($this->key));
+
+        if ($salt != $this->key)
+            throw new \Exception('Invalid salt encrypt');
+
+        return substr($jsonString,  strlen($this->key) - 1, strlen($c));
+    }
 }
