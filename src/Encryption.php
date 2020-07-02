@@ -86,7 +86,7 @@ class Encryption
 
     public function decriptSalt($textToDecript)
     {
-        $c = base64_decode($textToDecript);
+        $textToDecript = base64_decode($textToDecript);
 
         $salt = substr($textToDecript, 0, strlen($this->key));
 
