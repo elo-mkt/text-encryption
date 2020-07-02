@@ -88,11 +88,11 @@ class Encryption
     {
         $c = base64_decode($textToDecript);
 
-        $salt = substr($jsonString, 0, strlen($this->key));
+        $salt = substr($textToDecript, 0, strlen($this->key));
 
         if ($salt != $this->key)
             throw new \Exception('Invalid salt encrypt');
 
-        return substr($jsonString,  strlen($this->key) - 1, strlen($c));
+        return substr($textToDecript,  strlen($this->key) - 1, strlen($c));
     }
 }
