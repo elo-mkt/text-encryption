@@ -88,8 +88,6 @@ class Encryption
     {
         $c = base64_decode($textToDecript);
 
-        $jsonString = base64_decode($jsonString);
-
         $salt = substr($jsonString, 0, strlen($this->key));
 
         if ($salt != $this->key)
