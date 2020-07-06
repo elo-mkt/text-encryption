@@ -93,6 +93,6 @@ class Encryption
         if ($salt != $this->key)
             throw new \Exception('Invalid salt encrypt');
 
-        return substr($textToDecript,  strlen($this->key) - 1, strlen($textToDecript));
+        return substr($textToDecript,  strlen($this->key), strlen($textToDecript));
     }
 }
